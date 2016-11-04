@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Oppgave 2</title>
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style type="text/css">
+
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:300,400');
+	
+body{
+	margin: 0;
+	background-image: url('http://i.imgur.com/25427o7.png');
+	font-family: calibri, sans-serif;
+	font-size: 12px;
+	color: #555;
+	letter-spacing: 1px;
+	line-height: 1;
+}
+
+b{
+	padding: 3px;
+	color: #fff;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-size: 1.1em;
+	font-weight: 300;
+	text-transform: uppercase;
+	background-color: #555;
+}
+
+.flex{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#container{
+	width: 100%;
+	height: 100vh;
+	flex-flow: column wrap;
+}
+
+.bigbigbox{
+	width: 500px;
+	height: 350px;
+	flex-flow: row wrap;
+}
+
+.shapes_container{
+	width: 160px;
+	height: 100%;
+	background-color: transparent;
+	margin-right: 10px;
+	flex-flow: column wrap;
+	justify-content: space-between;
+}
+
+.shapes_container:last-child{
+	margin-right: 0;
+}
+
+.shape{
+	width: 160px;
+	height: 170px; 
+	background-color: rgba(255, 255, 255, 0.5);
+	border: 1px dashed transparent;
+	flex-flow: column wrap;
+}
+
+.circle{
+	width: 50px;
+	height: 50px;
+	border: 2px solid #555;
+	border-radius: 100px;
+	background-color: #fff;
+}
+
+.square, .rectangle{
+	width: 50px;
+	height: 50px;
+	border: 2px solid #555;
+	background-color: #fff;
+}
+
+#navigation{
+	width: 300px;
+	height: 1px;
+	background-color: #555;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 70px;
+	font-size: 16px;
+}
+
+.minisquare{
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border: 1px solid #555;
+	background-color: #555;
+	transform: rotate(45deg);
+	transition: all 0.3s;
+}
+
+.minidescription{
+	width: 40px;
+	height: 40px;
+	display: flex;
+	flex-flow: row no-wrap;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-weight: 300;
+	font-size: 0.6em;
+	transform: rotate(0deg);
+}
+
+.minidescriptionlink{
+	color: #fff;
+	border: none;
+	text-decoration: none;
+}
+
+.minidescriptionlink:hover .minisquare{
+	transform: rotate(135deg);
+}
+
+</style>
+
+</head>
+<body>
+
+<div id="container" class="flex">
+	<div class="bigbigbox flex">
+		<!-- sirkler -->
+		<div class="shapes_container flex">
+			<!-- sirkel 1 -->
+			<div class="shape flex">
+				<div class="circle" style="width:30px; height:30px;"></div> <br>
+				<div class="info">
+					<b>radius</b> <span id="s1_radius" class="s1_r">x</span> cm<br><br>
+					<b>omkrets</b> <span id="s1_omkrets">x</span> cm<br><br>
+					<b>areal</b> <span id="s1_areal">x</span> cm
+				</div>
+			</div>
+			<!-- sirkel 2 -->
+			<div class="shape flex">
+				<div class="circle"></div> <br>
+				<div class="info">
+					<b>radius</b> <span id="s2_radius" class="s1_r">x</span> cm<br><br>
+					<b>omkrets</b> <span id="s2_omkrets">x</span> cm<br><br>
+					<b>areal</b> <span id="s2_areal">x</span> cm
+				</div>
+			</div>
+		</div> <!-- /sirkler -->
+
+		<!-- kvadrater -->
+		<div class="shapes_container flex">
+			<!-- kvadrat 1 -->
+			<div class="shape flex">
+				<div class="square" style="width:30px; height:30px;"></div> <br>
+				<div class="info">
+					<b>side</b> <span id="k1_side">x</span> cm<br><br>
+					<b>omkrets</b> <span id="k1_omkrets">x</span> cm<br><br>
+					<b>areal</b> <span id="k1_areal">x</span> cm
+				</div>
+			</div>
+			<!-- kvadrat 2 -->
+			<div class="shape flex">
+				<div class="square"></div> <br>
+				<div class="info">
+					<b>side</b> <span id="k2_side">x</span> cm<br><br>
+					<b>omkrets</b> <span id="k2_omkrets">x</span> cm<br><br>
+					<b>areal</b> <span id="k2_areal">x</span> cm
+				</div>
+			</div>
+		</div> <!-- /kvadrater -->
+
+		<!-- rektangler -->
+		<div class="shapes_container flex">
+			<!-- rektangel 1 -->
+			<div class="shape flex">
+				<div class="rectangle" style="width:20px; height:40px;"></div> <br>
+				<div class="info">
+					<b>bredde</b> <span id="r1_bredde">x</span> cm<br><br>
+					<b>lengde</b> <span id="r1_lengde">x</span> cm<br><br>
+					<b>omkrets</b> <span id="r1_omkrets">x</span> cm<br><br>
+					<b>areal</b> <span id="r1_areal">x</span> cm
+				</div>
+			</div>
+			<!-- rektangel 2 -->
+			<div class="shape flex">
+				<div class="rectangle" style="width:50px; height:30px;"></div> <br>
+				<div class="info">
+					<b>bredde</b> <span id="r2_bredde">x</span> cm<br><br>
+					<b>lengde</b> <span id="r2_lengde">x</span> cm<br><br>
+					<b>omkrets</b> <span id="r2_omkrets">x</span> cm<br><br>
+					<b>areal</b> <span id="r2_areal">x</span> cm
+				</div>
+			</div> 
+		</div> <!-- /rektangler -->
+	</div> <!-- /bigbigbox -->
+
+<div id="navigation">
+		<a href="x-index.html" class="minidescriptionlink">
+		<div class="minisquare"></div>
+		<div class="minidescription">INDEX</div>
+		</a>
+
+		<a href="x-quiz.html" class="minidescriptionlink">
+		<div class="minisquare"></div>
+		<div class="minidescription">QUIZ</div>
+		</a>
+
+		<a href="x-geometri.html" class="minidescriptionlink">
+		<div class="minisquare"></div>
+		<div class="minidescription">GEOMETRI</div>
+		</a>
+
+		<a href="x-minibank.html" class="minidescriptionlink">
+		<div class="minisquare"></div>
+		<div class="minidescription">MINIBANK</div>
+		</a>
+	</div>
+
+</div> <!-- /container -->
+
+<script type="text/javascript">
+
+	//sirkel
+	function sirkel(radius, id) {
+		var omkrets = 2 * radius * 3.14;
+		var areal = radius * radius * 3.14;
+		document.getElementById(id + "_radius").innerHTML = radius;
+		document.getElementById(id + "_omkrets").innerHTML = omkrets;
+		document.getElementById(id + "_areal").innerHTML = areal;
+	}
+
+	sirkel(3, "s1");
+	sirkel(50, "s2");
+
+	//kvadrat
+	function kvadrat(side, id) {
+		var omkrets = side * 4;
+		var areal = side * side;
+		document.getElementById(id + "_side").innerHTML = side;
+		document.getElementById(id + "_omkrets").innerHTML = omkrets;
+		document.getElementById(id + "_areal").innerHTML = areal;
+	}
+
+	kvadrat(7, "k1");
+	kvadrat(21, "k2");
+
+	//rektangel
+	function rektangel(bredde, lengde, id) {
+		var omkrets = (bredde + lengde) * 2;
+		var areal = bredde * lengde;
+		document.getElementById(id + "_bredde").innerHTML = bredde;
+		document.getElementById(id + "_lengde").innerHTML = lengde;
+		document.getElementById(id + "_omkrets").innerHTML = omkrets;
+		document.getElementById(id + "_areal").innerHTML = areal;
+	}
+
+	rektangel(2, 4, "r1");
+	rektangel(25, 15, "r2");
+
+
+</script>
+
+</body>
+</html>
