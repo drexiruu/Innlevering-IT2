@@ -18,7 +18,7 @@
 			Skriv ut "Uttaket er mindre enn 0, transaksjonen er umulig."
 		Hvis penger som tas ut er større enn kontostørrelsen:
 			Skriv ut "Du har ikke dekning for denne transaksjonen."
-		Hvis penger som tas ut er gyldi:
+		Hvis penger som tas ut er gyldig:
 			Skriv ut "Du har XX kr på konto og vil nå ta ut YY kr, yada yada yada osv."
 	SLUTT
 
@@ -29,7 +29,7 @@
 
 		var pengerKonto = Number(prompt("Hvor mye penger har du på konto?"));
 		var pengerTaUt = Number(prompt("Hvor mye vil du ta ut?"));
-		var pengerRest = pengerKonto - pengerTaUt; 
+		var pengerRest = pengerKonto - pengerTaUt; // penger på konto etter transaksjonen
 
 		if (pengerTaUt < 0) {
 			document.write("Uttaket er mindre enn 0, transaksjon er ikke mulig.");
