@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Oppgave 2 (v2)</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+/* KVADRAT */
+	function kvadrat(side) {
+		var omkrets = side * 4; 	// formel for omkrets av kvadrat
+		var areal = side * side;	// formel for areal av kvadrat
+		document.write(
+			"Sidekantene i et kvadrat er " + side + " cm. " + 
+			"Omkretsen er " + omkrets + " cm og arealet er " + areal + " cm<sup>2</sup>. <br>"
+		);
+	}
+
+	// Kaller funksjonen, skriver inn siden til kvadratet
+	kvadrat(9);
+	kvadrat(23);
+
+/* REKTANGEL */
+	function rektangel(bredde, lengde) {
+		var omkrets = (bredde + lengde) * 2;	// formel for omkrets av rektangel
+		var areal = bredde * lengde; 	// formel for areal av rektangel
+		document.write(
+			"Bredden til et rektangel er " + bredde + " cm, og lengden er " + lengde + " cm. " +
+			"Omkretsen er " + omkrets + " cm og arealet er " + areal + " cm<sup>2</sup>. <br>"
+		);
+	}
+
+	// Kaller funksjonen, gir verdien for bredden og lengden til rektangelet
+	rektangel(6, 8);
+	rektangel(10, 15);
+
+/* SIRKEL */
+	function sirkel(radius) {
+		var omkrets = radius * 2 * 3.14;	// formel for omkrets av sirkel
+		var areal = radius * radius * 3.14;	// formel for areal av sirkel
+		document.write(
+			"Radien til en sirkel er " + radius + " cm. " + 
+			"Omkretsen er " + omkrets + " cm og arealet er " + areal + " cm<sup>2</sup>. <br>"
+		);
+	}
+
+	// Kaller funksjonen, gir verdien for radien til sirkelen
+	sirkel(4);
+	sirkel(3.14);
+	
+</script>
+
+</body>
+</html>
