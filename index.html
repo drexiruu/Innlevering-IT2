@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Innlevering IT2</title>
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style type="text/css">
+
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:300,400');
+
+body{
+	margin: 0;
+	background-image: url('bilder/noisy_grid.png');
+	font-family: calibri, sans-serif;
+	font-size: 16px;
+	color: #555;
+	letter-spacing: 1px;
+	line-height: 1;
+}
+
+.flex{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#container{
+	width: 100%;
+	height: 100vh;
+	flex-flow: column wrap;
+}
+
+#bigsquare{
+	width: 308px;
+	height: 308px;
+	flex-flow: row wrap;
+	transform: rotate(-45deg);
+}
+	
+.square{
+	width: 150px;
+	height: 150px;
+	margin-right: 2px;
+	border: 1px solid #555;
+	background-color: #555;
+	overflow: hidden;
+	transition: all 0.1s;
+}
+
+.zero{
+	background-color: transparent;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-size: 1.4em;
+	font-weight: 300;
+	color: #555;
+	border: none;
+}	
+
+.square_content{
+	width: 150px;
+	height: 150px;
+	background-color: rgba(255, 0, 0, 0);
+	flex-flow: row wrap;
+	transform: rotate(45deg);
+}
+
+.icon, .description{
+	width: 150px;
+	height: 150px;
+	flex-flow: row wrap;
+	transition: all 0.3s;
+}
+
+.description{
+	font-size: 0.8em;
+}
+
+.square:hover .icon{
+	margin-top: -150px;
+}
+
+.square:hover{
+	background-color: transparent;
+}
+
+.fa{
+	font-size: 2em;
+	color: #fff;
+}
+
+a{
+	color: #fff;
+	padding: 5px;
+	background-color: #555;
+	border: 1px solid #555;
+	text-decoration: none;
+	transition: all 0.3s;
+}
+
+a:hover{
+	color: #555;
+	background-color: transparent;
+}
+
+p{
+	color: #777;
+	text-align: center;
+	margin-top: -30px;
+}
+
+</style>
+
+</head>
+<body>
+
+<div id="container" class="flex">
+	<div id="bigsquare" class="flex">
+		<div class="square flex">
+			<div class="square_content flex">
+				<div class="icon flex"><span class="fa fa-cube"></span></div>
+				<div class="description flex">
+					<a href="oppgave2.html">OPPGAVE 2</a>
+					<p>Regn omkretsen og arealet av ulike figurer.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="square flex">
+			<div class="square_content flex">
+				<div class="icon flex"><span class="fa fa-question-circle"></span></div>
+				<div class="description flex">
+					<a href="oppgave1.html">OPPGAVE 1</a>
+					<p>Ta en quiz om noen kjente fysikere.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="square flex">
+			<div class="square_content flex">
+				<div class="icon flex"><span class="fa fa-btc"></span></div>
+				<div class="description flex">
+					<a href="oppgave3.html">OPPGAVE 3</a>
+					<p>Simuler uttak fra en minibank.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="square zero flex">
+			<div class="square_content flex">
+				<span>IT2 INNLEVERING // <small>07.11.2016</small></span>
+			</div>
+		</div>
+	</div>
+</div> <!-- /container -->
+
+</body>
+</html>
