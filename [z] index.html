@@ -12,19 +12,29 @@
 
 body{
 	margin: 0;
-	height: 100vh;
+	background-image: url('bilder/noisy_grid.png');
+	font-family: calibri, sans-serif;
+	font-size: 16px;
+	color: #555;
+	letter-spacing: 1px;
+	line-height: 1;
+}
+
+.flex{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-image: url('http://i.imgur.com/25427o7.png');
-	font-family: calibri, sans-serif;
-	letter-spacing: 1px;
+}
+
+#container{
+	width: 100%;
+	height: 100vh;
+	flex-flow: column wrap;
 }
 
 #bigsquare{
 	width: 308px;
 	height: 308px;
-	display: flex;
 	flex-flow: row wrap;
 	transform: rotate(-45deg);
 }
@@ -32,29 +42,14 @@ body{
 .square{
 	width: 150px;
 	height: 150px;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-	align-items: center;
 	margin-right: 2px;
 	border: 1px solid #555;
+	background-color: #555;
 	overflow: hidden;
 	transition: all 0.1s;
 }
 
-.ichi{
-	background-color: #555;
-}
-
-.ni{
-	background-color: #555;
-}
-
-.san{
-	background-color: #555;
-}
-
-.shi{
+.zero{
 	background-color: transparent;
 	font-family: 'Yanone Kaffeesatz', sans-serif;
 	font-size: 1.4em;
@@ -67,20 +62,14 @@ body{
 	width: 150px;
 	height: 150px;
 	background-color: rgba(255, 0, 0, 0);
-	display: flex;
 	flex-flow: row wrap;
-	justify-content: center;
-	align-items: center;
 	transform: rotate(45deg);
 }
 
 .icon, .description{
 	width: 150px;
 	height: 150px;
-	display: flex;
 	flex-flow: row wrap;
-	justify-content: center;
-	align-items: center;
 	transition: all 0.3s;
 }
 
@@ -126,44 +115,45 @@ p{
 </head>
 <body>
 
-<div id="bigsquare">
-	<div class="square ichi">
-		<div class="square_content">
-			<div class="icon"><span class="fa fa-cube"></span></div>
-			<div class="description">
-				<a href="x-geometri.html">OPPGAVE 2</a>
-				<p>Regn omkretsen og arealet av ulike figurer.</p>
+<div id="container" class="flex">
+	<div id="bigsquare" class="flex">
+		<div class="square flex">
+			<div class="square_content flex">
+				<div class="icon flex"><span class="fa fa-cube"></span></div>
+				<div class="description flex">
+					<a href="oppgave2.html">OPPGAVE 2</a>
+					<p>Regn omkretsen og arealet av ulike figurer.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="square flex">
+			<div class="square_content flex">
+				<div class="icon flex"><span class="fa fa-question-circle"></span></div>
+				<div class="description flex">
+					<a href="oppgave1.html">OPPGAVE 1</a>
+					<p>Ta en quiz om noen kjente fysikere.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="square flex">
+			<div class="square_content flex">
+				<div class="icon flex"><span class="fa fa-btc"></span></div>
+				<div class="description flex">
+					<a href="oppgave3.html">OPPGAVE 3</a>
+					<p>Simuler uttak fra en minibank.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="square zero flex">
+			<div class="square_content flex">
+				<span>IT2 INNLEVERING // <small>07.11.2016</small></span>
 			</div>
 		</div>
 	</div>
-
-	<div class="square ni">
-		<div class="square_content">
-			<div class="icon"><span class="fa fa-question-circle"></span></div>
-			<div class="description">
-				<a href="x-quiz.html">OPPGAVE 1</a>
-				<p>Ta en quiz om noen kjente fysikere.</p>
-			</div>
-		</div>
-	</div>
-
-	<div class="square san">
-		<div class="square_content">
-			<div class="icon"><span class="fa fa-btc"></span></div>
-			<div class="description">
-				<a href="x-minibank.html">OPPGAVE 3</a>
-				<p>Simuler uttak fra en minibank.</p>
-			</div>
-		</div>
-	</div>
-
-	<div class="square shi">
-		<!--<span class="square_content">IT2 INNLEVERING //<br> 07.11.2016</span>-->
-		<div class="square_content">
-			<span>IT2 INNLEVERING // <small>07.11.2016</small></span>
-		</div>
-	</div>
-</div>
+</div> <!-- /container -->
 
 </body>
 </html>
