@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Arrays, Objects and Functions</title>
+</head>
+<body>
+
+<button id="buttonId"> Click me </button> <br> <br>
+
+<script type="text/javascript">
+	
+	// ARRAY
+		// An array is a special variable, which can hold more than one value at a time.
+		// Use an array when you have a list of items.
+
+		// Example: 
+		var names = [
+			"Matthew",
+			"Mark",
+			"Luke",
+			"John" // Never put a comma after the last item
+		]
+
+		// Selecting values from an array: arrayName[indexNumber]		
+		// The first item in the array always has an index number of 0.
+
+		// Example:
+		document.write(names[0] + "<br>"); // Prints the first item in the array (Matthew)
+		document.write(names[1] + "<br>"); // Prints the second item in the array (Mark)
+		document.write(names[3]); // Prints the fourth name in the array (John)
+
+	document.write("<br><br>")
+
+	
+	// OBJECT
+		// An object is a special variable that can hold multiple values.
+		// Objects contain values called properties.
+
+		// Example:
+		var person = {
+			firstName: "Matthew",
+			lastName: "Smith",
+			age: 40
+		}
+
+		// Selecting properties in an object: objectName.propertyName
+		
+		// Example:
+		document.write(person.lastName + "<br>"); // Prints the last name of the person (Smith)
+		document.write(person.age) // Prints the age of the person (40)
+
+	document.write("<br><br>")
+
+	
+	// FUNCTIONS
+		// A function is a block of code designed to perform a particular task.
+		// A function is only executed when it is "called".
+
+		// Example:
+		function greetings(name) {
+			document.write("Good afternoon, " + name);
+		}
+
+		// "Calls" the function:
+		greetings("Mary");
+
+
+		// Example 2:
+		function clickMe() {
+			document.write("You clicked me!");
+		}
+
+		// "Calls" the function when the button is clicked:
+		document.getElementById("buttonId").onclick = function() {clickMe()};
+
+</script>
+
+</body>
+</html>
